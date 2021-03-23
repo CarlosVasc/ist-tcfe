@@ -1,8 +1,6 @@
 close all
 clear all
 
-%%EXAMPLE SYMBOLIC COMPUTATIONS
-
 
 r1=1.0162457409e3;
 r2=2.05507529065e3;
@@ -69,19 +67,22 @@ Ic=S(3);
 
 
 
-fid=fopen("tabela.tex","w+");
-fprintf(fid,"V1 & %f\\\\ \\hline \n...
-V2 & %f\\\\ \\hline \n...
-V3 & %f\\\\ \\hline \n...
-V4 & %f\\\\ \\hline \n...
-V5 & %f\\\\ \\hline \n...
-V6 & %f\\\\ \\hline \n...
-V7 & %f\\\\ \\hline \n...
-Ia & %f\\\\ \\hline \n...
-Ib & %f\\\\ \\hline \n...
-Ic & %f\\\\ \\hline \n...
-Id & %f\\\\ \\hline", V1,V2,V3,V4,V5,V6,V7,Ia,Ib,Ic,Id)
+fid=fopen("tabelaNos.tex","w+");
+fprintf(fid,"V1 & %f\\\\ \\hline \n\
+V2 & %f\\\\ \\hline \n\
+V3 & %f\\\\ \\hline \n\
+V4 & %f\\\\ \\hline \n\
+V5 & %f\\\\ \\hline \n\
+V6 & %f\\\\ \\hline \n\
+V7 & %f\\\\ \\hline", V1,V2,V3,V4,V5,V6,V7)
 
 fclose(fid);
 
+fid2=fopen("tabelaMalhas.tex","w+");
+fprintf(fid,"Ia & %f\\\\ \\hline \n\
+Ib & %f\\\\ \\hline \n\
+Ic & %f\\\\ \\hline \n\
+Id & %f\\\\ \\hline",Ia,Ib,Ic,Id)
+
+fclose(fid2);
 
